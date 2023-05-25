@@ -113,7 +113,7 @@ export default function Home() {
           </Text>
         </View>
 
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <ScrollView contentContainerStyle={styles.lower}>
           <View style = {styles.imgCntent}>
             <Image
               source={{
@@ -149,7 +149,7 @@ export default function Home() {
           </View>
 
             <Text style = {{margin: 15, padding: 5, fontWeight: '900', color: '#7FFFD4'}}>$4.2</Text>
-          </View>
+        </ScrollView>
         </View>
     </View>
     
@@ -160,9 +160,9 @@ export default function Home() {
 const styles = StyleSheet.create({
   head: {
     backgroundColor: '#7FFFD4',
-    borderRadius: 10,
+    borderRadius: 20,
     padding: 10,
-    marginTop: 5,
+    marginTop: 15,
     // justifyContent: 'space-between',
     // alignItems: 'center',
   },
@@ -228,4 +228,8 @@ const styles = StyleSheet.create({
   //   color: '#FFD700',
   //   marginLeft: 3,
   // },
+  lower: {
+    flexDirection: 'row', 
+    justifyContent: 'space-between',
+  }
 });
