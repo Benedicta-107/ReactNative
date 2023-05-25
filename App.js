@@ -70,17 +70,13 @@ const App = () => (
           <Tab.Screen
             name="Description"
             component={Description}
-            options={({
-                //headerLeft: () => (
-                // <Ionicons
-                // name="arrow-back"
-                // size={24}
-                // color="black"
-                // onPress={() => navigation.goBack()}
-                // />
-                //)
-                })}
-              />
+            options={{
+              header: () => null,
+              tabBarIcon: ({ color, size }) => (
+                <AntDesign name="infocirlceo" size={14} color="#808080" />
+                ),
+                }} 
+                />
       </Tab.Navigator>
     </NavigationContainer>
   );
